@@ -6,4 +6,11 @@ export default defineConfig({
    * @see https://windicss.org/features/attributify.html
    */
   attributify: true,
+  extract: {
+    include: [
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'components/**/*.vue'
+    ]
+  },
 })
