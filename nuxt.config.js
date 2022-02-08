@@ -23,6 +23,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+    ],
+    script: [
+      { hid: 'glitched-writer', src: 'https://cdn.jsdelivr.net/npm/glitched-writer/lib/index.min.js' }
     ]
   },
 
