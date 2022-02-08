@@ -12,5 +12,5 @@ export default defineConfig({
       'pages/**/*.vue',
       'components/**/*.vue'
     ]
-  },
+  }
 })
