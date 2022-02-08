@@ -32,7 +32,6 @@ export default {
   css: ['~/assets/css/global.css'],
 
   plugins: [
-    { src: '~/plugins/mdi.js' }
   ],
 
   components: true,
@@ -48,6 +47,5 @@ export default {
   ],
 
   build: {
-    transpile: ['mdi-vue']
   }
 }
