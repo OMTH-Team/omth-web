@@ -11,7 +11,7 @@
   </main>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   mounted () {
     this.textGlitch()
@@ -30,14 +30,11 @@ export default {
         easing: 'easeOutQuint'
       })
     },
-    textGlitch () {
+    async textGlitch () {
+      await this.sleep(1500)
       // eslint-disable-next-line no-undef
-      const writer = GlitchedWriter.create('.glitch', {
-        letterize: true,
-        glyphs: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-      }, () => {})
-      const phrases = ['Abandon the old dying world', 'Embrace the new existence', 'The place of the dream', 'The paradise', 'Hidden in the virtual world', 'Cαεlum β', 'Coming soon - Q4 2022']
-      this.sleep(1500)
+      const writer = GlitchedWriter.create('.glitch', 'encrypted', () => {})
+      const phrases = ['Abandon the old dying world', 'Embrace the new existence', 'The place of the dream', 'The paradise', 'Hidden in the virtual world', 'Coming soon - Q4 2022']
       writer.queueWrite(phrases, 2000, false)
     }
   }
