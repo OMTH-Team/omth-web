@@ -4,7 +4,7 @@
       <div class="m-auto">
         <div class="p-8">
           <!-- <img src="~/assets/text.svg" class="glitch w-220"> -->
-          <h1 class="glitch text-5xl text-white" />
+          <h1 class="glitch text-5xl text-white font-thin" />
         </div>
       </div>
     </div>
@@ -18,20 +18,24 @@ export default {
     this.indexAnimation()
   },
   methods: {
+    sleep (ms) {
+      return new Promise(resolve => setTimeout(resolve, ms))
+    },
     indexAnimation () {
       this.$anime({
         targets: '#index_container',
         opacity: [0, 1],
-        duration: 1000,
-        delay: 1000,
+        duration: 500,
+        delay: 1500,
         easing: 'easeOutQuint'
       })
     },
     textGlitch () {
       // eslint-disable-next-line no-undef
       const writer = GlitchedWriter.create('.glitch', {}, () => {})
-      const phrases = ['Abandon the old dying world', 'Embrace the new existence', 'The place of the dream', 'The paradise', 'Hidden in the virtual world', 'Cαεlum β']
-      writer.queueWrite(phrases, 1000, false)
+      const phrases = ['Abandon the old dying world', 'Embrace the new existence', 'The place of the dream', 'The paradise', 'Hidden in the virtual world', 'Cαεlum β', 'Coming soon - Q4 2022']
+      this.sleep(1500)
+      writer.queueWrite(phrases, 3000, false)
     }
   }
 }

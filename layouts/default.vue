@@ -1,3 +1,6 @@
 <template>
-  <Nuxt keep-alive />
+  <div>
+    <Nuxt keep-alive />
+    <Footer />
+  </div>
 </template>
