@@ -32,10 +32,13 @@ export default {
     },
     textGlitch () {
       // eslint-disable-next-line no-undef
-      const writer = GlitchedWriter.create('.glitch', {}, () => {})
+      const writer = GlitchedWriter.create('.glitch', {
+        letterize: true,
+        glyphs: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+      }, () => {})
       const phrases = ['Abandon the old dying world', 'Embrace the new existence', 'The place of the dream', 'The paradise', 'Hidden in the virtual world', 'Cαεlum β', 'Coming soon - Q4 2022']
       this.sleep(1500)
-      writer.queueWrite(phrases, 3000, false)
+      writer.queueWrite(phrases, 2000, false)
     }
   }
 }
